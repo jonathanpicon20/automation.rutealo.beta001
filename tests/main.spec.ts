@@ -5,7 +5,15 @@ import { login } from './flows/login.flow';
 import { crearServicio } from './flows/servicio.flow';
 import { crearTour } from './flows/tour.flow';
 
+
 test.describe('flujo completo sistema tours', () => {
+  
+  test.beforeEach(async ({ page }) => {
+    await page.setViewportSize({
+      width: 1920,
+      height: 1080,
+    });
+  });
 
   test.setTimeout(120000);
 
